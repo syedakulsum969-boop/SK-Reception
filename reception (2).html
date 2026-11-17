@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Reception Invitation · Qayyum &amp; Kulsum</title>
+<meta name="description" content="You are invited to the reception of Qayyum & Kulsum on 8 January 2027 at 8 PM, The Oasis Palace, Newark, CA.">
+<meta property="og:title" content="Reception Invitation · Qayyum & Kulsum">
+<meta property="og:description" content="8 January 2027, 8 PM · The Oasis Palace, Newark, CA">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#092f25">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Marcellus&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c3a2e;
+    --bg2:#092f25;
+    --band:#12503d;
+    --card:#0e4132;
+    --gold:#d9b560;
+    --gold-soft:#ebd694;
+    --gold-deep:#b8892e;
+    --ivory:#f6eed8;
+    --mist:#c3d4c4;
+    --lattice:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23d9b560' stroke-opacity='.11'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3Ccircle cx='30' cy='30' r='6'/%3E%3C/g%3E%3C/svg%3E");
+    --scallop:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20'%3E%3Cg fill='none' stroke='%23d9b560' stroke-opacity='.2'%3E%3Ccircle cx='0' cy='0' r='20'/%3E%3Ccircle cx='40' cy='0' r='20'/%3E%3Ccircle cx='20' cy='10' r='20'/%3E%3Ccircle cx='0' cy='20' r='20'/%3E%3Ccircle cx='40' cy='20' r='20'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg) var(--lattice);
+    color:var(--ivory);
+    font-family:'EB Garamond',Georgia,serif;
+    font-size:19px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body.locked{overflow:hidden}
+  [hidden]{display:none!important}
+  .arabic{font-family:'Amiri','Traditional Arabic',serif;direction:rtl;line-height:2.1}
+  .script{font-family:'Allura',cursive;font-weight:400}
+  .caps{font-family:'Marcellus',serif;letter-spacing:.24em;text-transform:uppercase;font-size:.78rem;color:var(--gold)}
+  .wrap{max-width:620px;margin:0 auto;padding:0 22px}
+  .band{background:var(--band) var(--scallop);border-top:1px solid var(--gold-deep);border-bottom:1px solid var(--gold-deep)}
+  section{padding:64px 0;text-align:center}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+  .star{width:26px;height:26px}
+  .divider{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px auto;max-width:240px}
+  .divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-deep))}
+  .divider::after{transform:scaleX(-1)}
+
+  /* ---------- Iris cover ---------- */
+  #doors{
+    position:fixed;inset:0;z-index:60;background:var(--bg2) var(--lattice);
+    clip-path:circle(150% at 50% 50%);
+    transition:clip-path 1.4s cubic-bezier(.7,0,.25,1);
+  }
+  #doors::before{content:"";position:absolute;inset:14px;border:1px solid var(--gold-deep);opacity:.6;pointer-events:none}
+  #doors::after{content:"";position:absolute;inset:22px;border:1px solid var(--gold-deep);opacity:.3;pointer-events:none}
+  #doors .mid{
+    position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:14px;text-align:center;padding:24px;transition:opacity .5s ease;
+  }
+  #doors .names-s{font-size:3.8rem;color:var(--gold-soft);line-height:1.1}
+  #doors .small{max-width:20em;color:var(--mist);font-style:italic}
+  .open-btn{
+    margin-top:10px;padding:14px 36px;border-radius:6px;border:1px solid var(--gold);
+    background:var(--gold);color:var(--bg2);font-family:'Marcellus',serif;letter-spacing:.22em;font-size:.82rem;
+    text-transform:uppercase;cursor:pointer;box-shadow:0 8px 26px rgba(4,28,20,.5);
+    transition:background .25s,transform .25s;
+  }
+  .open-btn:hover,.open-btn:focus-visible{background:var(--gold-soft);transform:translateY(-1px);outline:none}
+  #doors.opened{clip-path:circle(0 at 50% 50%)}
+  #doors.opened .mid{opacity:0;pointer-events:none}
+
+  /* ---------- Hero medallion ---------- */
+  .hero{position:relative;padding:84px 0 40px}
+  .medal{
+    width:min(88vw,420px);aspect-ratio:1;margin:0 auto;border-radius:50%;
+    border:1px solid var(--gold);
+    box-shadow:inset 0 0 0 9px var(--bg2),inset 0 0 0 10px var(--gold-deep),0 18px 50px rgba(4,28,20,.45);
+    background:radial-gradient(circle at 50% 35%,#145642,var(--bg2) 75%);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;
+  }
+  .medal .bism{font-size:1.45rem;color:var(--gold-soft);margin-top:4px}
+  .medal .big{font-size:3.7rem;color:var(--ivory);line-height:1.05}
+  .medal .and{font-family:'Marcellus',serif;color:var(--gold);letter-spacing:.3em;font-size:.78rem;margin:2px 0}
+  .hero .lead{margin:32px auto 0;max-width:30em;color:var(--mist);font-style:italic}
+  .pend{position:absolute;top:0;width:34px;height:138px;transform-origin:50% 0;animation:sway 5.5s ease-in-out infinite}
+  .pend.l{left:6%}
+  .pend.r{right:6%;animation-delay:-2.7s}
+  @keyframes sway{0%,100%{transform:rotate(-3.5deg)}50%{transform:rotate(3.5deg)}}
+
+  /* ---------- Verses ---------- */
+  .verse-ar{font-size:1.55rem;color:var(--ivory);margin:6px 0 10px}
+  .verse-en{font-style:italic;color:var(--mist);max-width:30em;margin:0 auto}
+  .ref{margin-top:10px}
+
+  /* ---------- Invitation ---------- */
+  .invite{font-size:1.3rem;color:var(--mist);font-style:italic;margin-top:14px}
+  .plate{
+    margin-top:26px;padding:34px 20px;border:1px solid var(--gold-deep);border-radius:22px;
+    background:var(--card) var(--scallop);box-shadow:inset 0 0 0 6px var(--bg),inset 0 0 0 7px rgba(217,181,96,.4);
+  }
+  .plate h3{font-size:3.2rem;color:var(--gold-soft);font-weight:400;line-height:1.2}
+  .plate .rel{font-family:'Marcellus',serif;letter-spacing:.12em;font-size:.82rem;color:var(--mist);text-transform:uppercase;margin-top:2px}
+  .plate .with{font-family:'Marcellus',serif;letter-spacing:.3em;font-size:.8rem;color:var(--gold);margin:18px 0 12px;text-transform:uppercase}
+
+  /* ---------- Details pass ---------- */
+  .pass{display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid var(--gold-deep);border-radius:16px;overflow:hidden;background:var(--card)}
+  .pass .cell{padding:24px 10px;text-align:center}
+  .pass .cell + .cell{border-left:1px dashed var(--gold-deep)}
+  .pass .big{font-family:'Allura',cursive;font-size:2.3rem;color:var(--gold-soft);line-height:1.15;margin-top:6px}
+  .pass .sm{color:var(--mist);font-size:.95rem;line-height:1.35}
+  .rings{display:flex;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap}
+  .ring{
+    width:74px;height:74px;border-radius:50%;border:1px solid var(--gold);
+    box-shadow:inset 0 0 0 4px var(--bg),inset 0 0 0 5px var(--gold-deep);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+  }
+  .ring b{font-family:'Marcellus',serif;font-weight:400;font-size:1.45rem;color:var(--gold-soft);line-height:1}
+  .ring span{font-family:'Marcellus',serif;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mist);margin-top:4px}
+  .done{margin-top:26px;font-family:'Allura',cursive;font-size:2.4rem;color:var(--gold-soft)}
+
+  /* ---------- Venue ---------- */
+  .venue h3{font-size:3rem;color:var(--gold-soft);font-weight:400;line-height:1.2;margin:6px 0 2px}
+  iframe{width:100%;height:250px;border:1px solid var(--gold-deep);border-radius:20px;margin-top:22px;filter:saturate(.8) contrast(.95)}
+  .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+  .btn{
+    display:inline-block;padding:12px 26px;border-radius:6px;border:1px solid var(--gold);background:transparent;
+    color:var(--gold-soft);font-family:'Marcellus',serif;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;
+    cursor:pointer;text-decoration:none;transition:background .25s,color .25s;
+  }
+  .btn:hover,.btn:focus-visible{background:var(--gold);color:var(--bg2);outline:none}
+  .btn.solid{background:var(--gold);color:var(--bg2)}
+  .btn.solid:hover{background:var(--gold-soft)}
+  .btn:disabled{opacity:.6;cursor:default}
+
+  /* ---------- RSVP ---------- */
+  .rsvp-card{background:var(--card) var(--scallop);border:1px solid var(--gold-deep);border-radius:22px;padding:44px 24px;box-shadow:0 18px 44px rgba(4,28,20,.4)}
+  .rsvp-card h2{font-size:3.2rem;color:var(--gold-soft);font-weight:400;line-height:1.2;margin:4px 0 6px}
+  .rsvp-card p.sub{color:var(--mist)}
+  form{max-width:400px;margin:26px auto 0;text-align:left;color-scheme:dark}
+  .fl{display:block;margin:18px 0 7px}
+  input[type=text],select{
+    width:100%;padding:12px 16px;font:inherit;font-size:1.05rem;color:var(--ivory);
+    background:var(--bg2);border:1px solid rgba(217,181,96,.5);border-radius:8px;
+  }
+  input[type=text]::placeholder{color:rgba(195,212,196,.6)}
+  input[type=text]:focus,select:focus{outline:2px solid var(--gold);outline-offset:1px}
+  .seg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .seg input{position:absolute;opacity:0;pointer-events:none}
+  .seg label{
+    text-align:center;padding:12px 8px;border:1px solid rgba(217,181,96,.5);border-radius:8px;background:var(--bg2);
+    cursor:pointer;font-size:1rem;transition:background .2s,color .2s;
+  }
+  .seg input:checked + label{background:var(--gold);border-color:var(--gold);color:var(--bg2)}
+  .seg input:focus-visible + label{outline:2px solid var(--gold-soft);outline-offset:2px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  #guestRow.hide{display:none}
+  .submit{text-align:center;margin-top:26px}
+  .msg{margin-top:14px;text-align:center;color:var(--gold-soft);min-height:1.5em;font-size:1rem}
+  .thanks{max-width:400px;margin:26px auto 0;padding:26px 20px;border:1px dashed var(--gold);border-radius:14px;text-align:center}
+  .thanks .tick{width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 12px}
+
+  footer{padding:56px 0 80px;text-align:center}
+  footer .arabic{font-size:1.6rem;color:var(--gold-soft)}
+  footer p{color:var(--mist);font-style:italic;max-width:26em;margin:0 auto}
+  footer .fam{margin-top:22px;font-style:normal;color:var(--ivory)}
+
+  .music{
+    position:fixed;right:16px;bottom:16px;z-index:40;width:46px;height:46px;border-radius:50%;
+    border:1px solid var(--gold);background:var(--gold);color:var(--bg2);font-size:1.25rem;cursor:pointer;
+    display:none;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(4,28,20,.5);
+  }
+  .music.show{display:flex}
+  .music.off::after{content:"";position:absolute;width:30px;height:2px;background:var(--bg2);transform:rotate(-45deg)}
+  .music:focus-visible{outline:2px solid var(--gold-soft);outline-offset:3px}
+
+  @media (max-width:520px){
+    body{font-size:18px}
+    #doors .names-s{font-size:3rem}
+    .medal{padding:22px}
+    .medal .big{font-size:3.1rem}
+    .plate h3{font-size:2.7rem}
+    .pass{grid-template-columns:1fr}
+    .pass .cell + .cell{border-left:none;border-top:1px dashed var(--gold-deep)}
+    .pass .cell{padding:18px 10px}
+    .ring{width:66px;height:66px}
+    .ring b{font-size:1.3rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body class="locked">
+
+<noscript>
+  <p style="padding:40px;text-align:center">Bismillah. We invite you to the reception of Mohammed Qayyum &amp; Syeda Kulsum Mustafa on Friday, 8 January 2027 at 8:00 PM, at The Oasis Palace, 35145 Newark Blvd, Newark, CA 94560. Please enable JavaScript to see the full invitation and RSVP.</p>
+</noscript>
+
+<!-- Iris cover -->
+<div id="doors">
+  <div class="mid">
+    <svg class="star" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#d9b560" stroke-width="1.5"><rect x="9" y="9" width="22" height="22"/><rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"/></g></svg>
+    <div class="caps">You are invited</div>
+    <div class="names-s script">Qayyum &amp; Kulsum</div>
+    <div class="small">Join us as we celebrate a blessed new chapter.</div>
+    <button class="open-btn" id="openBtn" type="button">Open Invitation</button>
+  </div>
+</div>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <svg class="pend l" viewBox="0 0 34 138" aria-hidden="true">
+      <line x1="17" y1="0" x2="17" y2="60" stroke="#b8892e" stroke-width="1.2"/>
+      <g fill="#d9b560"><rect x="9" y="62" width="16" height="16"/><rect x="9" y="62" width="16" height="16" transform="rotate(45 17 70)"/></g>
+      <line x1="17" y1="82" x2="17" y2="110" stroke="#b8892e" stroke-width="1.2"/>
+      <g fill="#ebd694"><rect x="12" y="113" width="10" height="10"/><rect x="12" y="113" width="10" height="10" transform="rotate(45 17 118)"/></g>
+    </svg>
+    <svg class="pend r" viewBox="0 0 34 138" aria-hidden="true">
+      <line x1="17" y1="0" x2="17" y2="60" stroke="#b8892e" stroke-width="1.2"/>
+      <g fill="#d9b560"><rect x="9" y="62" width="16" height="16"/><rect x="9" y="62" width="16" height="16" transform="rotate(45 17 70)"/></g>
+      <line x1="17" y1="82" x2="17" y2="110" stroke="#b8892e" stroke-width="1.2"/>
+      <g fill="#ebd694"><rect x="12" y="113" width="10" height="10"/><rect x="12" y="113" width="10" height="10" transform="rotate(45 17 118)"/></g>
+    </svg>
+    <div class="wrap reveal">
+      <div class="medal">
+        <svg class="star" viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#d9b560" stroke-width="1.5"><rect x="9" y="9" width="22" height="22"/><rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"/></g></svg>
+        <div class="bism arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+        <div class="caps" style="margin-top:6px">The Reception of</div>
+        <div class="big script" style="margin-top:8px">Qayyum</div>
+        <div class="and">and</div>
+        <div class="big script">Kulsum</div>
+      </div>
+      <p class="lead">With hearts full of gratitude, we invite you to celebrate and bless the beginning of their life together.</p>
+    </div>
+  </section>
+
+  <!-- Verse 1 -->
+  <div class="band">
+    <section>
+      <div class="wrap reveal">
+        <p class="verse-ar arabic">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</p>
+        <p class="verse-en">“And among His signs is that He created for you mates from among yourselves that you may find tranquility in them, and He placed between you affection and mercy.”</p>
+        <p class="caps ref">Qur’an 30:21 · Ar‑Rum</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Invitation -->
+  <section>
+    <div class="wrap reveal">
+      <div class="caps">With the blessings of Allah</div>
+      <p class="invite">We invite you to the reception of</p>
+      <div class="plate">
+        <h3 class="script">Mohammed Qayyum</h3>
+        <p class="rel">S/O Mr. &amp; Mrs. Mohammed Saleem</p>
+        <div class="with">with</div>
+        <h3 class="script">Syeda Kulsum Mustafa</h3>
+        <p class="rel">D/O Mr. &amp; Mrs. Syed Mustafa Hussaini</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details -->
+  <div class="band">
+    <section>
+      <div class="wrap reveal">
+        <div class="caps" style="margin-bottom:22px">Save the evening</div>
+        <div class="pass">
+          <div class="cell">
+            <div class="caps">Date</div>
+            <div class="big" id="dWk">Friday</div>
+            <div class="sm" id="dFull">8 January 2027</div>
+          </div>
+          <div class="cell">
+            <div class="caps">Time</div>
+            <div class="big">8:00 PM</div>
+            <div class="sm">Please be seated on time</div>
+          </div>
+          <div class="cell">
+            <div class="caps">Venue</div>
+            <div class="big">The Oasis Palace</div>
+            <div class="sm">Newark, California</div>
+          </div>
+        </div>
+        <div class="rings" id="rings" aria-live="off">
+          <div class="ring"><b id="cd">0</b><span>Days</span></div>
+          <div class="ring"><b id="ch">0</b><span>Hours</span></div>
+          <div class="ring"><b id="cm">0</b><span>Min</span></div>
+          <div class="ring"><b id="cs">0</b><span>Sec</span></div>
+        </div>
+        <div class="done script" id="doneMsg" hidden>The day has arrived, Alhamdulillah</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Venue -->
+  <section class="venue">
+    <div class="wrap reveal">
+      <div class="caps">Where</div>
+      <h3 class="script">The Oasis Palace</h3>
+      <p>35145 Newark Blvd, Newark, CA 94560</p>
+      <iframe title="Map showing The Oasis Palace" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=The%20Oasis%20Palace%2C%2035145%20Newark%20Blvd%2C%20Newark%2C%20CA%2094560&amp;output=embed"></iframe>
+      <div class="btns">
+        <a class="btn" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/dir/?api=1&destination=The%20Oasis%20Palace%2C%2035145%20Newark%20Blvd%2C%20Newark%2C%20CA%2094560">Open in Maps</a>
+        <button class="btn" type="button" id="calBtn">Save the Date</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verse 2 -->
+  <div class="band">
+    <section>
+      <div class="wrap reveal">
+        <p class="verse-ar arabic">رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا</p>
+        <p class="verse-en">“Our Lord, grant us from among our spouses and offspring comfort to our eyes, and make us leaders for the righteous.”</p>
+        <p class="caps ref">Qur’an 25:74 · Al‑Furqan</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- RSVP -->
+  <section>
+    <div class="wrap reveal">
+      <div class="rsvp-card">
+        <div class="caps">Reply by form</div>
+        <h2 class="script">Reserve Your Seat</h2>
+        <p class="sub">A quick reply helps the families plan the evening.</p>
+
+        <form id="rsvpForm" novalidate>
+          <label class="fl caps" for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" placeholder="Your full name" required>
+
+          <span class="fl caps">Your reply</span>
+          <div class="seg">
+            <input type="radio" name="attending" id="yes" value="Yes" checked>
+            <label for="yes">Gladly, InshaAllah</label>
+            <input type="radio" name="attending" id="no" value="No">
+            <label for="no">Unable to attend</label>
+          </div>
+
+          <div id="guestRow" class="two">
+            <div>
+              <label class="fl caps" for="adults">Adults</label>
+              <select id="adults" name="adults">
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+              </select>
+            </div>
+            <div>
+              <label class="fl caps" for="kids">Under 5</label>
+              <select id="kids" name="children">
+                <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="submit"><button class="btn solid" type="submit" id="submitBtn">Send Reply</button></div>
+          <div class="msg" id="msg" role="status"></div>
+        </form>
+
+        <div class="thanks" id="thanks" hidden>
+          <div class="tick">✓</div>
+          <p id="thanksText"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap reveal">
+    <p style="margin-bottom:22px">Your du’as are the most treasured gift we could ask for.</p>
+    <div class="arabic">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</div>
+    <p>May Allah bless you both, shower His blessings upon you, and unite you in goodness.</p>
+    <p class="fam">With love,<br>The Mohammed Family</p>
+    <div class="btns"><button class="btn" type="button" id="shareBtn">Send to a Friend</button></div>
+  </div>
+</footer>
+
+<audio id="bgm" src="music.mp3" loop preload="none"></audio>
+<button class="music" id="musicBtn" type="button" aria-label="Turn music on or off">♪</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ============ EDIT THESE ============ */
+  var CONFIG = {
+    brideGroom: "Qayyum & Kulsum",
+    // Reception date and time (Pacific Time). Used for the countdown and calendar file.
+    eventDate: "2027-01-08",
+    eventTime: "20:00",
+    tzOffset: "-08:00",            // winter = -08:00, summer = -07:00
+    timezone: "America/Los_Angeles",
+    venueName: "The Oasis Palace",
+    venueAddress: "35145 Newark Blvd, Newark, CA 94560",
+    rsvpUrl: "https://script.google.com/macros/s/AKfycbyKdkp0CwDQ5zK5osFUcQIf4vE0WuQ8OP2A3MMRfM6psH2yz-iPDI4Aw3wDe44GsbGPtw/exec"
+  };
+  /* ==================================== */
+
+  var $ = function(id){ return document.getElementById(id); };
+  var target = new Date(CONFIG.eventDate + "T" + CONFIG.eventTime + ":00" + CONFIG.tzOffset);
+
+  // Date display from config
+  try{
+    $("dWk").textContent = target.toLocaleDateString("en-US", {weekday:"long", timeZone:CONFIG.timezone});
+    $("dFull").textContent = target.toLocaleDateString("en-GB", {day:"numeric", month:"long", year:"numeric", timeZone:CONFIG.timezone});
+  }catch(e){}
+
+  // Cover (iris opens) + music
+  var doors = $("doors");
+  var reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+  var io = ("IntersectionObserver" in window) ? new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+  }, {threshold:0.12}) : null;
+  $("openBtn").addEventListener("click", function(){
+    doors.classList.add("opened");
+    document.body.classList.remove("locked");
+    // Start music on this tap (browsers only allow sound after a tap). Hidden if music.mp3 is missing.
+    var bgm = $("bgm"), mb = $("musicBtn");
+    bgm.volume = 0.5;
+    mb.classList.add("show");
+    var pl = bgm.play();
+    if(pl && pl.catch){ pl.catch(function(){ mb.classList.add("off"); }); }
+    reveals.forEach(function(r){ if(io){ io.observe(r); } else { r.classList.add("in"); } });
+    setTimeout(function(){ doors.style.display = "none"; }, 1500);
+  });
+
+  // Music toggle
+  $("bgm").addEventListener("error", function(){ $("musicBtn").style.display = "none"; });
+  $("musicBtn").addEventListener("click", function(){
+    var a = $("bgm"), b = $("musicBtn");
+    if(a.paused){ a.play().then(function(){ b.classList.remove("off"); }).catch(function(){}); }
+    else { a.pause(); b.classList.add("off"); }
+  });
+
+  // Countdown rings
+  function tick(){
+    var diff = target - new Date();
+    if(diff <= 0){
+      $("rings").hidden = true;
+      $("doneMsg").hidden = false;
+      return;
+    }
+    var s = Math.floor(diff/1000);
+    $("cd").textContent = Math.floor(s/86400);
+    $("ch").textContent = Math.floor(s%86400/3600);
+    $("cm").textContent = Math.floor(s%3600/60);
+    $("cs").textContent = s%60;
+  }
+  tick(); setInterval(tick, 1000);
+
+  // Calendar file
+  function pad(n){ return (n<10?"0":"")+n; }
+  $("calBtn").addEventListener("click", function(){
+    var d = CONFIG.eventDate.replace(/-/g,"");
+    var hm = CONFIG.eventTime.split(":");
+    var start = hm[0] + hm[1] + "00";
+    var end = pad(parseInt(hm[0],10) + 3) + hm[1] + "00";
+    var ics = [
+      "BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Reception Invitation//EN","CALSCALE:GREGORIAN",
+      "BEGIN:VEVENT",
+      "UID:reception-" + d + "@invitation",
+      "DTSTAMP:" + new Date().toISOString().replace(/[-:]/g,"").split(".")[0] + "Z",
+      "DTSTART;TZID=" + CONFIG.timezone + ":" + d + "T" + start,
+      "DTEND;TZID=" + CONFIG.timezone + ":" + d + "T" + end,
+      "SUMMARY:Reception of " + CONFIG.brideGroom,
+      "LOCATION:" + CONFIG.venueName + "\\, " + CONFIG.venueAddress.replace(/,/g,"\\,"),
+      "DESCRIPTION:Reception of " + CONFIG.brideGroom + ".",
+      "END:VEVENT","END:VCALENDAR"
+    ].join("\r\n");
+    var blob = new Blob([ics], {type:"text/calendar;charset=utf-8"});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "Reception-Qayyum-Kulsum.ics";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 1000);
+  });
+
+  // Share
+  $("shareBtn").addEventListener("click", function(){
+    var data = {title:"Reception Invitation · " + CONFIG.brideGroom, text:"Qayyum & Kulsum would love to have you at their reception.", url:location.href};
+    if(navigator.share){ navigator.share(data).catch(function(){}); }
+    else if(navigator.clipboard){
+      navigator.clipboard.writeText(location.href).then(function(){
+        $("shareBtn").textContent = "Link Copied ✓";
+        setTimeout(function(){ $("shareBtn").textContent = "Send to a Friend"; }, 2000);
+      });
+    }
+  });
+
+  // RSVP
+  Array.prototype.forEach.call(document.querySelectorAll("input[name=attending]"), function(r){
+    r.addEventListener("change", function(){
+      var no = document.querySelector("input[name=attending]:checked").value === "No";
+      $("guestRow").classList.toggle("hide", no);
+    });
+  });
+
+  $("rsvpForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var name = $("name").value.trim();
+    var attending = document.querySelector("input[name=attending]:checked").value;
+    var msg = $("msg");
+    if(!name){ msg.textContent = "Please add your name so we know who is replying."; $("name").focus(); return; }
+    msg.textContent = "";
+    var btn = $("submitBtn");
+    btn.disabled = true; btn.textContent = "Sending…";
+
+    var body = new URLSearchParams();
+    body.append("name", name);
+    body.append("attending", attending);
+    body.append("event", "Reception");
+    body.append("adults", attending === "Yes" ? $("adults").value : 0);
+    body.append("children", attending === "Yes" ? $("kids").value : 0);
+
+    fetch(CONFIG.rsvpUrl, {method:"POST", mode:"no-cors", body:body})
+      .then(function(){
+        $("rsvpForm").hidden = true;
+        $("thanksText").textContent = attending === "Yes"
+          ? "JazakAllah Khair, " + name + ". Your seat is noted and we can’t wait to celebrate with you, InshaAllah."
+          : "Thank you for telling us, " + name + ". We will miss you and keep you in our du’as.";
+        $("thanks").hidden = false;
+      })
+      .catch(function(){
+        btn.disabled = false; btn.textContent = "Send Reply";
+        msg.textContent = "That did not go through. Please check your connection and try again.";
+      });
+  });
+})();
+</script>
+</body>
+</html>
